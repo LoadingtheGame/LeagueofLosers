@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+            android:id="@+id/cadrView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginEnd="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginStart="8dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:innerRadius="0dp"
+            app:cardElevation="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="2dp" android:layout_marginBottom="2dp">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+
+                android:paddingLeft="8dp">
+
+            <TextView
+                    android:id="@+id/textViewNome"
+                    android:layout_width="128dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="TextView"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginLeft="16dp" android:layout_marginStart="16dp"/>
+
+            <TextView
+                    android:id="@+id/textViewTelefone"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewFuncao"
+                    android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="16dp" app:layout_constraintHorizontal_bias="0.0"/>
+            <TextView
+                    android:id="@+id/textViewNick"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+            />
+            <TextView
+                    android:id="@+id/textViewFuncao"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewEmail" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" android:layout_marginBottom="24dp"
+                    app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.757"
+                    android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textViewNick"
+                    app:layout_constraintVertical_bias="1.0"/>
+            <TextView
+                    android:id="@+id/textViewEmail"
+                    android:layout_width="165dp"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewNome"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewTelefone"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" app:layout_constraintEnd_toStartOf="@+id/textViewNick"
+                    android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                    app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.291"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

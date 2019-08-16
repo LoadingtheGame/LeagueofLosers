@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">League of Loosers</string>
+    <string name="tab_text_1">Campeonatos</string>
+    <string name="tab_text_2">Times</string>
+    <string name="tab_text_3">Jogos</string>
+    <string name="tab_text_4">Jogadores</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="sample_mask">##/##/####</string>
+
+    <string name="nome">Nome</string>
+    <string name="categoria">Categoria</string>
+    <string name="regras">Regras</string>
+    <string name="descricao">Descrição</string>
+    <string name="inicio">Início</string>
+    <string name="fim">Fim</string>
+    <string name="times">Times</string>
+    <string name="jogadores">Jogadores</string>
+    <string name="nick">Nick</string>
+    <string name="email">Email</string>
+    <string name="funcao">Função</string>
+    <string name="telefone">Telefone</string>
+
+    <string name="tela_campeonato">Adicionar Campeonato</string>
+    <string name="tela_time">Adicionar Time</string>
+    <string name="tela_jogador">Adicionar Jogador</string>
+
+</resources>
