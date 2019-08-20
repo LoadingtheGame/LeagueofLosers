@@ -1,9 +1,7 @@
 package com.example.wineryfactory.View
-import android.content.Context
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import com.example.wineryfactory.Adicionar_Time
 import com.example.wineryfactory.Controller.ButtonFuncoesSQL
 import com.example.wineryfactory.Model.Jogador
 import com.example.wineryfactory.R

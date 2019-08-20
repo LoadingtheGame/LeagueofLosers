@@ -71,4 +71,15 @@ class ButtonFuncoesSQL (context: Context) {
         }
         return list
     }
+
+    fun buscaTime(): MutableList<Time> {
+        var result = Database(con).readableDatabase.rawQuery("select * from time", null)
+
+        var list: MutableList<Time> = ArrayList()
+        while (result.moveToNext()) {
+            var time = Time(result.getString(1))
+            list.add(time)
+        }
+        return list
+    }
 }
