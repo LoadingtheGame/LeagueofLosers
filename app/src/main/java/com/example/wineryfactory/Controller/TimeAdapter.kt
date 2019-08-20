@@ -27,10 +27,10 @@ class TimeAdapter(private val context: Context, private var timeList: MutableLis
     }
 
     class TimeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val textViewNome = itemView.textViewNomeTime
+        val textViewNomeTime = itemView.textViewNomeTime
 
         fun bindView(time: Time) {
-            textViewNome.text = time.nome
+            textViewNomeTime.text = time.nome
         }
     }
 }

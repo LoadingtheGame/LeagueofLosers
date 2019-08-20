@@ -22,6 +22,7 @@ class Adicionar_Time : AppCompatActivity() {
 
         btn_NovoTime.setOnClickListener {
             val Intent = Intent(this, Cadastrar_Time::class.java)
+            startActivity(Intent)
         }
 
 
