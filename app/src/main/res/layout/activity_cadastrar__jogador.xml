@@ -10,7 +10,7 @@
     <ImageButton
             android:layout_width="53dp"
             android:layout_height="39dp" app:srcCompat="@drawable/ic_arrow_seta_direita"
-            android:id="@+id/btnTimes2" android:layout_marginTop="8dp"
+            android:id="@+id/btn_AdicionarTimes" android:layout_marginTop="8dp"
             app:layout_constraintTop_toBottomOf="@+id/textView8" app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
             app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"

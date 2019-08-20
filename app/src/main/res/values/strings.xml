@@ -22,6 +22,7 @@
     <string name="email">Email</string>
     <string name="funcao">Função</string>
     <string name="telefone">Telefone</string>
+    <string name="addTime">Adicionar Time</string>
 
     <string name="tela_campeonato">Adicionar Campeonato</string>
     <string name="tela_time">Adicionar Time</string>
