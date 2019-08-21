@@ -37,10 +37,11 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onPageSelected(i: Int) {
-                index= i
+                index = i
                 if (i == 0) {
                     fab.menuIconView.setImageResource(R.drawable.ic_trophy)
                     fab.visibility = View.VISIBLE
+                    menu_adicionar.labelText = "Adicionar Campeonato"
                 } else if (i == 1) {
                     fab.visibility = View.INVISIBLE
                 } else if (i == 2) {
@@ -55,22 +56,18 @@ class MainActivity : AppCompatActivity() {
             }
 
 
-
         })
 
         menu_adicionar.setOnClickListener {
-            if (index ==0){
+            if (index == 0) {
                 fab.close(true)
                 startActivity(Intent(applicationContext, Cadastrar_Campeonato::class.java))
                 finish()
-            } else if (index == 1){
-
-
-            }else if (index == 2){
+            } else if (index == 2) {
                 fab.close(true)
                 startActivity(Intent(applicationContext, Cadastrar_Time::class.java))
                 finish()
-            }else if (index == 3){
+            } else if (index == 3) {
                 fab.close(true)
                 startActivity(Intent(applicationContext, Cadastrar_Jogador::class.java))
                 finish()
