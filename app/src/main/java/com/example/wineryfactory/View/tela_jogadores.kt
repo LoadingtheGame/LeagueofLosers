@@ -1,5 +1,6 @@
 package com.example.wineryfactory.View
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
 import android.os.Bundle
@@ -56,6 +57,11 @@ class tela_jogadores : Fragment() {
         recyclerView.adapter = jogadorAdapter
         recyclerView.layoutManager = LinearLayoutManager(activity!!.applicationContext)
         recyclerView.smoothScrollToPosition(jogadorAdapter.itemCount)
+    }
+
+    @SuppressLint("MissingSuperCall")
+    override fun onResume() {
+        updateList()
     }
 
     interface OnFragmentInteractionListener {
