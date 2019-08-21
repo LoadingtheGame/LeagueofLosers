@@ -18,6 +18,7 @@ class Cadastrar_Jogador : AppCompatActivity() {
         val context = this
 
         btnCriar_Jogador.setOnClickListener {
+
             if (edtFuncao.text.toString().length > 0 &&
                     edtTelefone.text.toString().length > 0){
                 var telefone = edtTelefone.unmaskedText
@@ -33,16 +34,13 @@ class Cadastrar_Jogador : AppCompatActivity() {
                 edtFuncao.setText("")
                 edtTelefone.setMaskedText("")
             }
+
+
         }
 
         btn_AdicionarTimes.setOnClickListener {
             val Intente = Intent(this, Adicionar_Time::class.java)
             startActivity(Intente)
         }
-    }
-
-    override fun onBackPressed() {
-        finish()
-        startActivity(Intent(applicationContext, MainActivity::class.java))
     }
 }

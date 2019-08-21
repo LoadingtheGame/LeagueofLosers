@@ -31,15 +31,31 @@ class tela_jogadores : Fragment() {
         }
     }
 
+    lateinit var recyclerView: RecyclerView
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View? {
         var view = inflater.inflate(R.layout.tela_jogadores, container, false)
-        var jogadorAdapter = JogadorAdapter(activity!!.applicationContext, ButtonFuncoesSQL(activity!!.applicationContext).buscaJogador() )
-        var recyclerView = view.findViewById<RecyclerView>(R.id.recyclerViewJogador)
+        var jogadorAdapter = JogadorAdapter(
+            activity!!.applicationContext,
+            ButtonFuncoesSQL(activity!!.applicationContext).buscaJogador()
+        )
+        recyclerView = view.findViewById(R.id.recyclerViewJogador)
         recyclerView.adapter = jogadorAdapter
         recyclerView.layoutManager = LinearLayoutManager(activity!!.applicationContext)
         recyclerView.smoothScrollToPosition(jogadorAdapter.itemCount)
+
         return view
+    }
+
+    fun updateList() {
+        var jogadorAdapter = JogadorAdapter(
+            activity!!.applicationContext,
+            ButtonFuncoesSQL(activity!!.applicationContext).buscaJogador()
+        )
+        recyclerView.adapter = jogadorAdapter
+        recyclerView.layoutManager = LinearLayoutManager(activity!!.applicationContext)
+        recyclerView.smoothScrollToPosition(jogadorAdapter.itemCount)
     }
 
     interface OnFragmentInteractionListener {

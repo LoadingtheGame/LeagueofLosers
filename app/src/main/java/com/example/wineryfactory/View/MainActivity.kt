@@ -62,15 +62,12 @@ class MainActivity : AppCompatActivity() {
             if (index == 0) {
                 fab.close(true)
                 startActivity(Intent(applicationContext, Cadastrar_Campeonato::class.java))
-                finish()
             } else if (index == 2) {
                 fab.close(true)
                 startActivity(Intent(applicationContext, Cadastrar_Time::class.java))
-                finish()
             } else if (index == 3) {
                 fab.close(true)
                 startActivity(Intent(applicationContext, Cadastrar_Jogador::class.java))
-                finish()
             }
         }
 

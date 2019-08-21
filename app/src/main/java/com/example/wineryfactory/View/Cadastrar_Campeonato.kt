@@ -36,9 +36,4 @@ class Cadastrar_Campeonato : AppCompatActivity() {
             }
         }
     }
-
-    override fun onBackPressed() {
-        finish()
-        startActivity(Intent(applicationContext, MainActivity::class.java))
-    }
 }
