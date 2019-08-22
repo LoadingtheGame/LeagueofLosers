@@ -37,14 +37,9 @@ class tela_jogadores : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         var view = inflater.inflate(R.layout.tela_jogadores, container, false)
-        var jogadorAdapter = JogadorAdapter(
-            activity!!.applicationContext,
-            ButtonFuncoesSQL(activity!!.applicationContext).buscaJogador()
-        )
+
         recyclerView = view.findViewById(R.id.recyclerViewJogador)
-        recyclerView.adapter = jogadorAdapter
-        recyclerView.layoutManager = LinearLayoutManager(activity!!.applicationContext)
-        recyclerView.smoothScrollToPosition(jogadorAdapter.itemCount)
+        updateList()
 
         return view
     }
@@ -57,11 +52,6 @@ class tela_jogadores : Fragment() {
         recyclerView.adapter = jogadorAdapter
         recyclerView.layoutManager = LinearLayoutManager(activity!!.applicationContext)
         recyclerView.smoothScrollToPosition(jogadorAdapter.itemCount)
-    }
-
-    @SuppressLint("MissingSuperCall")
-    override fun onResume() {
-        updateList()
     }
 
     interface OnFragmentInteractionListener {
