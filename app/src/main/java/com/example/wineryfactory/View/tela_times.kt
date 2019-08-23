@@ -2,9 +2,13 @@ package com.example.wineryfactory.View
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.wineryfactory.Controller.ButtonFuncoesSQL
+import com.example.wineryfactory.Controller.TimeAdapter
 import com.example.wineryfactory.R
 
 
@@ -23,12 +27,27 @@ class tela_times : Fragment() {
         }
     }
 
+    lateinit var recyclerView: RecyclerView
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.tela_times, container, false)
+        var v = inflater.inflate(R.layout.tela_times, container, false)
+        recyclerView = v.findViewById(R.id.recyclerViewTimes)
+        return v
+    }
+
+    fun updateList() {
+        var timeAdapter = TimeAdapter(activity!!.applicationContext, ButtonFuncoesSQL(activity!!.applicationContext).buscaTime() )
+        recyclerView.adapter = timeAdapter
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.smoothScrollToPosition(timeAdapter.itemCount)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateList()
     }
 
 

@@ -2,9 +2,11 @@ package com.example.wineryfactory.Controller
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import com.example.wineryfactory.Model.Time
 import com.example.wineryfactory.R
 import kotlinx.android.synthetic.main.jogador_item.view.*
@@ -27,10 +29,10 @@ class TimeAdapter(private val context: Context, private var timeList: MutableLis
     }
 
     class TimeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        val textViewNomeTime = itemView.textViewNomeTime
+        private val textViewNomeTime = itemView.textViewNome
 
         fun bindView(time: Time) {
-            //textViewNomeTime.text = time.nome
+            textViewNomeTime.text = time.nome
         }
     }
 }

@@ -2,6 +2,7 @@ package com.example.wineryfactory.Controller
 
 import android.content.ContentValues
 import android.content.Context
+import android.util.Log
 import com.example.wineryfactory.Model.Jogador
 import android.widget.Toast
 import com.example.wineryfactory.Model.Campeonato
@@ -53,7 +54,7 @@ class ButtonFuncoesSQL (context: Context) {
 
         var result = Database(con).writableDatabase.insert("time", null, cv)
 
-        if (result == -1.toLong()){
+        if (result == (-1).toLong()){
             Toast.makeText(con, "Erro", Toast.LENGTH_SHORT).show()
         }else{
             Toast.makeText(con, "Sucesso", Toast.LENGTH_SHORT).show()
@@ -74,7 +75,6 @@ class ButtonFuncoesSQL (context: Context) {
 
     fun buscaTime(): MutableList<Time> {
         var result = Database(con).readableDatabase.rawQuery("select * from time", null)
-
         var list: MutableList<Time> = ArrayList()
         while (result.moveToNext()) {
             var time = Time(result.getString(1))

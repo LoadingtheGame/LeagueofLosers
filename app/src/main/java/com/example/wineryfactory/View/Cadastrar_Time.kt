@@ -18,13 +18,10 @@ class Cadastrar_Time : AppCompatActivity() {
         var context = this
 
         btnCriar_Time.setOnClickListener {
-            if (edtNome_Time.text.toString().length > 0){
-
+            if (edtNome_Time.text.toString().isNotEmpty()){
                 var time = Time(edtNome_Time.text.toString())
                 var db = ButtonFuncoesSQL(context)
-
                 db.insertTime(time)
-
                edtNome_Time.setText("")
             }
         }

@@ -38,9 +38,7 @@ class tela_jogadores : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         var view = inflater.inflate(R.layout.tela_jogadores, container, false)
-
         recyclerView = view.findViewById(R.id.recyclerViewJogador)
-        updateList()
         return view
     }
 
@@ -57,8 +55,6 @@ class tela_jogadores : Fragment() {
     override fun onResume() {
         super.onResume()
         updateList()
-        Log.d("OPA", "Ta funfando")
-
     }
 
     interface OnFragmentInteractionListener {
