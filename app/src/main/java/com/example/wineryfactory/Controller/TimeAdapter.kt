@@ -30,7 +30,7 @@ class TimeAdapter(private val context: Context, private var timeList: MutableLis
         val textViewNomeTime = itemView.textViewNomeTime
 
         fun bindView(time: Time) {
-            textViewNomeTime.text = time.nome
+            //textViewNomeTime.text = time.nome
         }
     }
 }

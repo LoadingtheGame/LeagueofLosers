@@ -1,4 +1,5 @@
 package com.example.wineryfactory.View
+
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -19,14 +20,17 @@ class Cadastrar_Jogador : AppCompatActivity() {
 
         btnCriar_Jogador.setOnClickListener {
 
-            if (edtFuncao.text.toString().length > 0 &&
-                    edtTelefone.text.toString().length > 0){
+            if (edtFuncao.text.toString().isNotEmpty() &&
+                edtTelefone.text.toString().isNotEmpty()
+            ) {
                 var telefone = edtTelefone.unmaskedText
-                var jogador = Jogador(edtNome.text.toString(),edtNick.text.toString(),edtEmail.text.toString(),
-                    edtFuncao.text.toString(), telefone.toString())
+                var jogador = Jogador(
+                    edtNome.text.toString(), edtNick.text.toString(), edtEmail.text.toString(),
+                    edtFuncao.text.toString(), telefone.toString()
+                )
                 var db = ButtonFuncoesSQL(context)
-
                 db.insertJogador(jogador)
+
 
                 edtNome.setText("")
                 edtNick.setText("")
@@ -39,8 +43,8 @@ class Cadastrar_Jogador : AppCompatActivity() {
         }
 
         btn_AdicionarTimes.setOnClickListener {
-            val Intente = Intent(this, Adicionar_Time::class.java)
-            startActivity(Intente)
+            val intent = Intent(this, Adicionar_Time::class.java)
+            startActivity(intent)
         }
     }
 }

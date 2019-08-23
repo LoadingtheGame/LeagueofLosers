@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,7 +41,6 @@ class tela_jogadores : Fragment() {
 
         recyclerView = view.findViewById(R.id.recyclerViewJogador)
         updateList()
-
         return view
     }
 
@@ -52,6 +52,13 @@ class tela_jogadores : Fragment() {
         recyclerView.adapter = jogadorAdapter
         recyclerView.layoutManager = LinearLayoutManager(activity!!.applicationContext)
         recyclerView.smoothScrollToPosition(jogadorAdapter.itemCount)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateList()
+        Log.d("OPA", "Ta funfando")
+
     }
 
     interface OnFragmentInteractionListener {

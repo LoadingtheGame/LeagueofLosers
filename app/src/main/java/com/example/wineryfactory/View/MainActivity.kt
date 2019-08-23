@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         val fab: FloatingActionMenu = findViewById(R.id.fab)
         fab.isIconAnimated = false
         fab.setClosedOnTouchOutside(true)
-        var index: Int = 0
+        var index = 0
 
         viewPager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrollStateChanged(p0: Int) {
@@ -59,15 +59,19 @@ class MainActivity : AppCompatActivity() {
         })
 
         menu_adicionar.setOnClickListener {
-            if (index == 0) {
-                fab.close(true)
-                startActivity(Intent(applicationContext, Cadastrar_Campeonato::class.java))
-            } else if (index == 2) {
-                fab.close(true)
-                startActivity(Intent(applicationContext, Cadastrar_Time::class.java))
-            } else if (index == 3) {
-                fab.close(true)
-                startActivity(Intent(applicationContext, Cadastrar_Jogador::class.java))
+            when (index) {
+                0 -> {
+                    fab.close(true)
+                    startActivity(Intent(applicationContext, Cadastrar_Campeonato::class.java))
+                }
+                2 -> {
+                    fab.close(true)
+                    startActivity(Intent(applicationContext, Cadastrar_Time::class.java))
+                }
+                3 -> {
+                    fab.close(true)
+                    startActivity(Intent(applicationContext, Cadastrar_Jogador::class.java))
+                }
             }
         }
 
