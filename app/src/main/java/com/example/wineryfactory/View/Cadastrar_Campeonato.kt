@@ -1,12 +1,16 @@
 package com.example.wineryfactory.View
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.DatePicker
 import com.example.wineryfactory.Controller.ButtonFuncoesSQL
 import com.example.wineryfactory.Model.Campeonato
 import com.example.wineryfactory.R
 import kotlinx.android.synthetic.main.activity_cadastrar__campeonato.*
+import java.util.*
+import javax.xml.datatype.DatatypeConstants.MONTHS
 
 class Cadastrar_Campeonato : AppCompatActivity() {
 
@@ -15,6 +19,16 @@ class Cadastrar_Campeonato : AppCompatActivity() {
         setContentView(R.layout.activity_cadastrar__campeonato)
 
         val context = this
+
+        val c:Calendar = Calendar.getInstance()
+        var datePick: DatePickerDialog? = null
+
+        edtInicio_Campeonato.setOnClickListener {
+
+            var dia:Int = c.get(Calendar.DAY_OF_MONTH)
+            var mes:Int = c.get(Calendar.MONTH)
+            var ano: Int = c.get(Calendar.YEAR)
+        }
 
         btnCriar_Campeonato.setOnClickListener {
             if (edtNome_Campeonato.text.toString().length > 0 &&
