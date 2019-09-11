@@ -1,16 +1,15 @@
 package com.example.wineryfactory.View
 
 import android.app.DatePickerDialog
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.DatePicker
+import android.view.View
+import android.widget.EditText
 import com.example.wineryfactory.Controller.ButtonFuncoesSQL
 import com.example.wineryfactory.Model.Campeonato
 import com.example.wineryfactory.R
 import kotlinx.android.synthetic.main.activity_cadastrar__campeonato.*
 import java.util.*
-import javax.xml.datatype.DatatypeConstants.MONTHS
 
 class Cadastrar_Campeonato : AppCompatActivity() {
 
@@ -20,14 +19,22 @@ class Cadastrar_Campeonato : AppCompatActivity() {
 
         val context = this
 
-        val c:Calendar = Calendar.getInstance()
-        var datePick: DatePickerDialog? = null
+        //Caledario
+        val c = Calendar.getInstance()
+        val ano = c.get(Calendar.YEAR)
+        val mes = c.get(Calendar.MONTH)
+        val dia = c.get(Calendar.DAY_OF_MONTH)
 
-        edtInicio_Campeonato.setOnClickListener {
+        //abrir campo e preencher campo
 
-            var dia:Int = c.get(Calendar.DAY_OF_MONTH)
-            var mes:Int = c.get(Calendar.MONTH)
-            var ano: Int = c.get(Calendar.YEAR)
+
+        edtinicio_Campeonato.setOnClickListener{
+            edtInicio_Campeonato.setText("         ")
+            val dpd = DatePickerDialog(context, DatePickerDialog.OnDateSetListener { view, mYear, mMonth, mDay ->
+                edtinicio_Campeonato.setText("$mDay/$mMonth/$mYear")
+            }, ano, mes, dia)
+
+            dpd.show()
         }
 
         btnCriar_Campeonato.setOnClickListener {
