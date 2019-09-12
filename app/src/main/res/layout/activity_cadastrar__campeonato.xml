@@ -6,7 +6,7 @@
         xmlns:mask="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".View.Cadastrar_Campeonato" android:id="@+id/constraintLayout2">
+        tools:context=".View.Cadastrar_Campeonato" android:id="@+id/telaCadastrarCampeonato">
     <TextView
             android:text="@string/nome"
             android:layout_width="wrap_content"
@@ -17,17 +17,20 @@
             android:layout_marginStart="8dp"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp" android:layout_marginLeft="8dp"/>
+
     <TextView
-            android:text="@string/categoria"
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView6"
-            app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/categoria"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/edtFim_Campeonato" android:layout_marginTop="20dp"
-            android:layout_marginLeft="8dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtfim_Campeonato" />
+
     <TextView
             android:text="@string/regras"
             android:layout_width="wrap_content"
@@ -106,40 +109,6 @@
             app:layout_constraintEnd_toEndOf="parent" android:layout_marginRight="8dp"/>
 
 
-    <com.github.pinball83.maskededittext.MaskedEditText
-            android:id="@+id/edtFim_Campeonato"
-            android:layout_width="121dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:inputType="number"
-            android:textColor="@color/colorAccent"
-            android:textColorHint="@color/colorPrimary"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="@+id/edtInicio_Campeonato"
-            app:layout_constraintStart_toStartOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView5"
-            app:layout_constraintVertical_bias="0.0"
-            app:mask="**/**/****"
-            app:maskIconColor="@color/colorPrimary"
-            app:notMaskedSymbol="*" />
-
-    <com.github.pinball83.maskededittext.MaskedEditText
-            android:id="@+id/edtInicio_Campeonato"
-            android:layout_width="121dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="356dp"
-            android:inputType="number"
-            android:textColor="@color/colorAccent"
-            android:textColorHint="@color/colorPrimary"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4"
-            app:mask="**/**/****"
-            app:maskIconColor="@color/colorPrimary"
-            app:notMaskedSymbol="*" />
-
     <Spinner
             android:layout_width="130dp"
             android:layout_height="wrap_content"
@@ -180,19 +149,32 @@
                 app:layout_constraintVertical_bias="0.988"
         />
 
-    <EditText
+    <Button
             android:id="@+id/edtinicio_Campeonato"
             android:layout_width="121dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
             android:layout_marginTop="8dp"
-            android:ems="10"
-            android:hint="  /   /    "
-            android:inputType="textPersonName"
+            android:background="@color/butt"
+            android:hint="dd/mm/aaaa"
             android:textColor="@color/colorAccent"
             android:textColorHint="@color/colorAccent"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+            android:id="@+id/edtfim_Campeonato"
+            android:layout_width="121dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/butt"
+            android:hint="dd/mm/aaaa"
+            android:textColor="@color/colorAccent"
+            android:textColorHint="@color/colorAccent"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
 </android.support.constraint.ConstraintLayout>
