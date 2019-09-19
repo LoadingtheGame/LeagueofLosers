@@ -18,7 +18,7 @@ class TimeAdapter(private val context: Context, private var timeList: MutableLis
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TimeViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.jogador_item, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.time_item, parent, false)
         return TimeViewHolder(view)
     }
 
@@ -29,10 +29,10 @@ class TimeAdapter(private val context: Context, private var timeList: MutableLis
     }
 
     class TimeViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-        private val textViewNomeTime = itemView.textViewNome
+         val textViewNomeTime:TextView? = itemView.textViewNomeTime
 
         fun bindView(time: Time) {
-            textViewNomeTime.text = time.nome
+            textViewNomeTime?.text = time.nome
         }
     }
 }

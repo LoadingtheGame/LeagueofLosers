@@ -39,7 +39,9 @@ class tela_times : Fragment() {
     }
 
     fun updateList() {
-        var timeAdapter = TimeAdapter(activity!!.applicationContext, ButtonFuncoesSQL(activity!!.applicationContext).buscaTime() )
+        var timeAdapter = TimeAdapter(
+            activity!!.applicationContext,
+            ButtonFuncoesSQL(activity!!.applicationContext).buscaTime() )
         recyclerView.adapter = timeAdapter
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.smoothScrollToPosition(timeAdapter.itemCount)
