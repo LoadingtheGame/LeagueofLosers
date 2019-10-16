@@ -9,9 +9,9 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".View.Adicionar_Time">
-        </activity>
-        <activity android:name=".Cadastrar">
+        <activity android:name=".View.Adicionar_Time"
+                android:label="Selecionar Time"
+                android:parentActivityName=".View.Cadastrar_Jogador">
         </activity>
         <activity
                 android:name=".SplashScreen"
@@ -28,15 +28,18 @@
         </activity>
         <activity
                 android:name=".View.Cadastrar_Jogador"
-                android:label="@string/tela_jogador">
+                android:label="@string/tela_jogador"
+                android:parentActivityName=".View.MainActivity">
         </activity>
         <activity
                 android:name=".View.Cadastrar_Time"
-                android:label="@string/tela_time">
+                android:label="@string/tela_time"
+                android:parentActivityName=".View.MainActivity">
         </activity>
         <activity
                 android:name=".View.Cadastrar_Campeonato"
-                android:label="@string/tela_campeonato">
+                android:label="@string/tela_campeonato"
+                android:parentActivityName=".View.MainActivity">
         </activity>
     </application>
 

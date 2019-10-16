@@ -22,8 +22,8 @@ class Database (context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, nul
                     "nome text," +
                     "descricao text," +
                     "regras text," +
-                    "inicio date," +
-                    "fim date)"
+                    "inicio text," +
+                    "fim text)"
         )
 
         db!!.execSQL(
